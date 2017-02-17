@@ -1,0 +1,440 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>EventGame</name>
+    <events>
+        <variable constant="0" name="highscore" sid="862217066979730" static="0" type="number">0</variable>
+        <variable constant="0" name="score" sid="275680444371949" static="0" type="number">0</variable>
+        <variable constant="0" name="Variable1" sid="192662584809390" static="0" type="number">360</variable>
+        <variable constant="0" name="Variable2" sid="801273419962711" static="0" type="number">550</variable>
+        <variable constant="0" name="Aisle" sid="629078959721108" static="0" type="number">1</variable>
+        <comment>Prevents player from placing food below a tower</comment>
+        <event-block sid="445122655136800">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="402882921848808" type="System">
+                    <param id="0" name="First value">Touch.Y</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Second value">food.Y</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="934665060261626">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="259165636407221" type="Touch" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="336498706007513" type="System">
+                            <param id="0" name="Object to create">Particles</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">Touch.X(1)</param>
+                            <param id="3" name="Y">Touch.Y(1)</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="452936522550258" type="System">
+                            <param id="0" name="Object to create">food</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">Touch.X(1)</param>
+                            <param id="3" name="Y">Touch.Y(1)</param>
+                        </action>
+                        <action id="-18" name="Rotate clockwise" sid="217028978729511" type="food">
+                            <param id="0" name="Degrees">random(-2,2)</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="622069795919502" type="food">
+                            <param id="0" name="Scale">random(0.91, 1.09)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="660635155681721" type="System">
+                            <param id="0" name="Variable">Variable1</param>
+                            <param id="1" name="Value">Touch.X(1)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="491713492203426" type="System">
+                            <param id="0" name="Variable">Variable2</param>
+                            <param id="1" name="Value">Touch.Y(1)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="972870610155091" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="766514119068156" type="FoodScores">
+                            <param id="0" name="X">Aisle</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">Self.CurValue + 1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="598093773355079">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="804281714187472" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="347694847171307" type="Audio">
+                    <param id="0" name="Audio file">HibearnationMainv1</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;music&quot;</param>
+                </action>
+                <action id="-20" name="Set layout scale" sid="856132702908126" type="System">
+                    <param id="0" name="Scale">0.33</param>
+                </action>
+                <action id="2" name="Stop" sid="198859460068924" type="AisleNumbers" />
+                <action id="3" name="Set at XY" sid="264746905616100" type="FoodScores">
+                    <param id="0" name="X">0</param>
+                    <param id="1" name="Y">1</param>
+                    <param id="2" name="Value">&quot;Syrupy Pancakes&quot;</param>
+                </action>
+                <action id="3" name="Set at XY" sid="235777687287028" type="FoodScores">
+                    <param id="0" name="X">1</param>
+                    <param id="1" name="Y">1</param>
+                    <param id="2" name="Value">&quot;Sushi&quot;</param>
+                </action>
+                <action id="3" name="Set at XY" sid="737161567515565" type="FoodScores">
+                    <param id="0" name="X">2</param>
+                    <param id="1" name="Y">1</param>
+                    <param id="2" name="Value">&quot;Waffles&quot;</param>
+                </action>
+                <action id="3" name="Set at XY" sid="689021464249316" type="FoodScores">
+                    <param id="0" name="X">3</param>
+                    <param id="1" name="Y">1</param>
+                    <param id="2" name="Value">&quot;Buttery Pancakes&quot;</param>
+                </action>
+                <action id="3" name="Set at XY" sid="213371027378001" type="FoodScores">
+                    <param id="0" name="X">4</param>
+                    <param id="1" name="Y">1</param>
+                    <param id="2" name="Value">&quot;Tomato Slices&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="553180706968894">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="331805349322329" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="885761010728645" type="SpriteFont">
+                    <param id="0" name="Text">highscore &amp; newline &amp; newline &amp; score</param>
+                </action>
+                <action id="5" name="Set frame" sid="975596041274079" type="kakeUI">
+                    <param id="0" name="Frame number">Aisle-1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="841910110668758">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="451921504053053" type="System">
+                            <param id="0" name="Variable">Variable2</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">camera.Y</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="399562277806534" type="camera">
+                            <param id="0" name="X">lerp(camera.X, camera.X, 0.02)</param>
+                            <param id="1" name="Y">lerp(camera.Y, Variable2, 0.005)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block disabled="1" sid="856738102614883">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="274841552912698" type="System">
+                    <param id="0" name="First value">camera.Y - wavaSurfacce.Y</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Second value">720</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block disabled="1" sid="257164789950010">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="244694206559484" type="System">
+                    <param id="0" name="First value">distance(camera.X, camera.Y, platform.X, platform.Y)</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Second value">ViewportBottom(1) - ViewportTop(1) - 480</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action disabled="1" id="-20" name="Set layout scale" sid="926126039734413" type="System">
+                    <param id="0" name="Scale">lerp(LayoutScale, LayoutScale * 0.9, 0.05)</param>
+                </action>
+                <action id="-17" name="Set layer scale" sid="402588770853147" type="System">
+                    <param id="0" name="Layer">0</param>
+                    <param id="1" name="Scale">lerp(LayerScale(0), LayerScale(0) * 0.9, 0.05)</param>
+                </action>
+                <action id="-17" name="Set layer scale" sid="700820684311372" type="System">
+                    <param id="0" name="Layer">1</param>
+                    <param id="1" name="Scale">lerp(LayerScale(1), LayerScale(1) * 0.9, 0.05)</param>
+                </action>
+                <action id="-17" name="Set layer scale" sid="291265895917605" type="System">
+                    <param id="0" name="Layer">2</param>
+                    <param id="1" name="Scale">lerp(LayerScale(2), LayerScale(2) * 0.9, 0.05)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="289316574604172">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="912990798387283" type="System">
+                    <param id="0" name="First value">distance(camera.X, camera.Y, platform.X, platform.Y)</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Second value">ViewportBottom(1) - ViewportTop(1) - 400</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action disabled="1" id="-20" name="Set layout scale" sid="334942275352613" type="System">
+                    <param id="0" name="Scale">lerp(LayoutScale, LayoutScale * 1.1, 0.0125)</param>
+                </action>
+                <action id="-17" name="Set layer scale" sid="730453576888813" type="System">
+                    <param id="0" name="Layer">0</param>
+                    <param id="1" name="Scale">lerp(LayerScale(0), LayerScale(0) * 1.1, 0.0125)</param>
+                </action>
+                <action id="-17" name="Set layer scale" sid="774384055440350" type="System">
+                    <param id="0" name="Layer">1</param>
+                    <param id="1" name="Scale">lerp(LayerScale(1), LayerScale(1) * 1.1, 0.0125)</param>
+                </action>
+                <action id="-17" name="Set layer scale" sid="404462845983392" type="System">
+                    <param id="0" name="Layer">2</param>
+                    <param id="1" name="Scale">lerp(LayerScale(2), LayerScale(2) * 1.1, 0.0125)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="510709901398363">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="183622540873508" type="System">
+                    <param id="0" name="First value">LayerScale(0)</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Second value">0.33</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-17" name="Set layer scale" sid="465496009750265" type="System">
+                    <param id="0" name="Layer">0</param>
+                    <param id="1" name="Scale">0.33</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="555244248115975">
+            <conditions>
+                <condition id="-3" inverted="1" name="Is on-screen" sid="374574802501312" type="food" />
+                <condition behavior="Physics" id="1" name="Compare velocity" sid="631670760808221" type="food">
+                    <param id="0" name="Which">1</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="362561992784893" type="food" />
+            </actions>
+        </event-block>
+        <event-block sid="510817763491829">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="535013630963056" type="food">
+                    <param id="0" name="Object">Ground</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-34" name="Set layer background color" sid="695802237619875" type="System">
+                    <param id="0" name="Layer">0</param>
+                    <param id="1" name="Color">rgb(255, 32, 32)</param>
+                </action>
+                <action id="-16" name="Wait" sid="406030881288601" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-34" name="Set layer background color" sid="803502977738735" type="System">
+                    <param id="0" name="Layer">0</param>
+                    <param id="1" name="Color">rgb(204, 255, 255)</param>
+                </action>
+                <action id="-9" name="Set value" sid="826789462995148" type="System">
+                    <param id="0" name="Variable">score</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="697384375467238" type="System">
+                    <param id="0" name="Variable">Variable1</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="270591001337781" type="System">
+                    <param id="0" name="Variable">Variable2</param>
+                    <param id="1" name="Value">550</param>
+                </action>
+                <action id="-26" name="Restart layout" sid="670669339305168" type="System" />
+                <action id="-2" name="Go to layout" sid="516898317151837" type="System">
+                    <param id="0" name="Layout">EndGame</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="775575949607135">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="730928183320349" type="System">
+                    <param id="0" name="Variable">score</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">highscore</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="870229790193797" type="System">
+                    <param id="0" name="Variable">highscore</param>
+                    <param id="1" name="Value">score</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="817551694286191">
+            <conditions>
+                <condition id="2" name="Is in touch" sid="987833577485790" type="Touch" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="466203600193098">
+                    <conditions>
+                        <condition id="-13" name="Pick nth instance" sid="383339706421730" type="System">
+                            <param id="0" name="Object">food</param>
+                            <param id="1" name="Instance">food.Count - 1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="384935287220002">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="595083159698414" type="System">
+                                    <param id="0" name="First value">Touch.Y(1)</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">food.Y</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="483908172032617" type="kakeUI">
+                                    <param id="0" name="X">Touch.X(1)</param>
+                                    <param id="1" name="Y">Touch.Y(1)</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="825696776246006" type="kakeUI">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="742669322397828" type="kakeIndicator">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="249527633273502">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="391174321388698" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="11" name="Set collisions enabled" sid="827220699502302" type="kakeIndicator">
+                                            <param id="0" name="Collisions">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="273981238029988">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Compare two values" sid="301211495951543" type="System">
+                                    <param id="0" name="First value">Touch.Y(1)</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Second value">food.Y</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="981336417531733" type="kakeIndicator">
+                                    <param id="0" name="X">Touch.X(1)</param>
+                                    <param id="1" name="Y">Touch.Y(1)</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="501165720824432" type="kakeIndicator">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="186329244190175" type="kakeUI">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="302480675174646">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="335166020011927" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="11" name="Set collisions enabled" sid="315870809670661" type="kakeIndicator">
+                                            <param id="0" name="Collisions">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="861337169731137">
+            <conditions>
+                <condition id="-22" name="Else" sid="226692174593795" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="573508417247608">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="811474996596303" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="144899339447185" type="kakeIndicator">
+                            <param id="0" name="X">900</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="622872394739569" type="kakeIndicator">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="967419669962598" type="kakeUI">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="605343639126120">
+            <conditions>
+                <condition id="-18" name="On created" sid="746443943334478" type="food" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="395862370571529" type="food">
+                    <param id="0" name="Frame number">Aisle-1</param>
+                </action>
+                <action id="2" name="Stop" sid="550231537283102" type="food" />
+            </actions>
+        </event-block>
+        <event-block sid="842717112884157">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="719950330974754" type="System">
+                    <param id="0" name="Variable">score</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">50</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="674817156182093">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="681855970236236" type="System">
+                            <param id="0" name="First value">score%50</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="295531637978641">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="832194469595545" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="661097876642379" type="System">
+                                    <param id="0" name="Variable">Aisle</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="706278421893765" type="AisleNumbers">
+                                    <param id="0" name="Frame number">Aisle</param>
+                                </action>
+                                <action id="2" name="Stop" sid="467340137764116" type="AisleNumbers" />
+                                <action behavior="Fade" id="0" name="Restart fade" sid="918758353142002" type="AisleNumbers" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

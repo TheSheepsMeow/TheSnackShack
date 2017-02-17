@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>EventEndGame</name>
+    <events>
+        <variable constant="0" name="SyrupPancakes" sid="262998880345199" static="0" type="number">0</variable>
+        <variable constant="0" name="Sushi" sid="909075642087761" static="0" type="number">0</variable>
+        <variable constant="0" name="Waffles" sid="505864678309049" static="0" type="number">0</variable>
+        <variable constant="0" name="Pancakes" sid="624729435573206" static="0" type="number">0</variable>
+        <variable constant="0" name="Tomatoes" sid="313503953277744" static="0" type="number">0</variable>
+        <event-block sid="773550011298844">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="485021979963170" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Sine" id="2" name="Set magnitude" sid="521813675144396" type="bear">
+                    <param id="0" name="Magnitude">5</param>
+                </action>
+                <action id="-9" name="Set value" sid="579158927435963" type="System">
+                    <param id="0" name="Variable">Aisle</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-3" name="Create object" sid="562405205759578" type="System">
+                    <param id="0" name="Object to create">food</param>
+                    <param id="1" name="Layer">&quot;FG&quot;</param>
+                    <param id="2" name="X">Cart.X</param>
+                    <param id="3" name="Y">FinalScore.Y</param>
+                </action>
+                <action id="5" name="Set frame" sid="829803157883593" type="food">
+                    <param id="0" name="Frame number">Aisle</param>
+                </action>
+                <action id="2" name="Stop" sid="156457798492799" type="food" />
+            </actions>
+        </event-block>
+        <event-block sid="116049688111499">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="455385693625094" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="683148551107272" type="FinalScore">
+                    <param id="0" name="Text">&quot;Number of &quot;&amp;FoodScores.At(Aisle,2)&amp;&quot;: &quot;&amp;FoodScores.At(Aisle,0)</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
