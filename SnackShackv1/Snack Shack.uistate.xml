@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2uistate>
+    <!--This is a UI state file - its content describes the user interface settings when the project was last open.
+It is entirely optional and the project will load without it.  If you are placing the project under source control,
+you probably do not want to add any .uistate.xml files to the repository.-->
+    <configurations>
+        <active>
+            <configuration name="HTML5" />
+        </active>
+        <display name="HTML5" />
+    </configurations>
+    <open-tabs>
+        <layout active="1" order="0">Game</layout>
+        <layout order="2">Title</layout>
+        <layout order="4">Loader</layout>
+        <event-sheet order="1">EventGame</event-sheet>
+        <event-sheet order="3">Title</event-sheet>
+    </open-tabs>
+    <properties>
+        <property expanded="1" name="About" />
+        <property expanded="1" name="Project settings" />
+        <property expanded="0" name="Window Size" />
+        <property expanded="1" name="Configuration Settings" />
+    </properties>
+    <families-expanded root="1" />
+    <folders-expanded>
+        <folder expanded="1" path="object-folder/" />
+        <folder expanded="1" path="layout-folder/" />
+        <folder expanded="1" path="event-folder/" />
+        <folder expanded="1" path="file-folder/" />
+        <folder expanded="1" path="sound-folder/" />
+        <folder expanded="1" path="music-folder/" />
+        <folder expanded="0" path="file-folder/Icons/" />
+        <folder expanded="1" path="animation-folder/food/" />
+        <folder expanded="1" path="animation-folder/platform/" />
+        <folder expanded="1" path="animation-folder/camera/" />
+        <folder expanded="1" path="animation-folder/bugger/" />
+        <folder expanded="1" path="animation-folder/kakeIndicator/" />
+        <folder expanded="1" path="animation-folder/basket/" />
+        <folder expanded="1" path="animation-folder/Cart/" />
+        <folder expanded="1" path="animation-folder/bear/" />
+        <folder expanded="1" path="animation-folder/FrontCart/" />
+        <folder expanded="1" path="animation-folder/bgGradient/" />
+        <folder expanded="1" path="animation-folder/kakeUI/" />
+        <folder expanded="1" path="animation-folder/separator/" />
+        <folder expanded="1" path="animation-folder/Ground/" />
+        <folder expanded="1" path="animation-folder/AisleNumbers/" />
+        <folder expanded="1" path="animation-folder/BadFood/" />
+        <folder expanded="1" path="animation-folder/Warning/" />
+        <folder expanded="1" path="animation-folder/thesheepsmeow/" />
+        <folder expanded="1" path="animation-folder/Title_BG/" />
+        <folder expanded="1" path="animation-folder/muteButton/" />
+        <folder expanded="1" path="animation-folder/menuButton/" />
+        <folder expanded="1" path="animation-folder/menuButtonReset/" />
+        <folder expanded="1" path="animation-folder/menuButtonHome/" />
+        <folder expanded="1" path="animation-folder/backButton/" />
+        <folder expanded="1" path="animation-folder/homeButton/" />
+        <folder expanded="1" path="animation-folder/restartButton/" />
+        <folder expanded="1" path="animation-folder/titleButton/" />
+    </folders-expanded>
+</c2uistate>
