@@ -101,9 +101,45 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-21" name="Reset global variables" sid="819806931603064" type="System" />
+                        <action disabled="1" id="-21" name="Reset global variables" sid="819806931603064" type="System" />
                         <action id="-2" name="Go to layout" sid="450099877772055" type="System">
                             <param id="0" name="Layout">Game</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="493639490671755" type="System">
+                            <param id="0" name="Variable">Aisle</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="320599450227710" type="System">
+                            <param id="0" name="Variable">Pancakes</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="473740219069008" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="204811424688207" type="System">
+                            <param id="0" name="Variable">Sushi</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="413039933803156" type="System">
+                            <param id="0" name="Variable">SyrupPancakes</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="533554001532040" type="System">
+                            <param id="0" name="Variable">Tomatoes</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="133549006014582" type="System">
+                            <param id="0" name="Variable">Variable1</param>
+                            <param id="1" name="Value">360</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="581680604236002" type="System">
+                            <param id="0" name="Variable">Variable2</param>
+                            <param id="1" name="Value">1010</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="657759527655331" type="System">
+                            <param id="0" name="Variable">Waffles</param>
+                            <param id="1" name="Value">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -258,7 +294,7 @@
                     </conditions>
                     <actions>
                         <action id="8" name="Open URL in new window" sid="906428128147956" type="Browser">
-                            <param id="0" name="URL">&quot;http://www.thesheepsmeow.com/&quot;</param>
+                            <param id="0" name="URL">&quot;http://www.thesheepsmeow.com/html5&quot;</param>
                             <param id="1" name="Tag">&quot;NewWindow&quot;</param>
                         </action>
                     </actions>

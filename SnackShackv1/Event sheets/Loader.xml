@@ -32,7 +32,7 @@
                     </conditions>
                     <actions>
                         <action id="-5" name="Set width" sid="532980775293469" type="loaderProgress">
-                            <param id="0" name="Width">lerp(loaderProgress.Width, 250 * loadingprogress, 0.05)</param>
+                            <param id="0" name="Width">lerp(loaderProgress.Width, 230 * loadingprogress, 0.05)</param>
                         </action>
                         <action id="0" name="Set text" sid="122804280905174" type="textDebug">
                             <param id="0" name="Text">loadingprogress</param>

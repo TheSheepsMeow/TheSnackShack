@@ -2,7 +2,7 @@
 <c2project>
     <name>Snack Shack</name>
     <description></description>
-    <version>0.1</version>
+    <version>0.2</version>
     <author>The Sheep&apos;s Meow</author>
     <author-email>community@thesheepsmeow.com</author-email>
     <author-website>http://www.thesheepsmeow.com</author-website>
@@ -719,6 +719,30 @@
                             <point x="0.0543478" y="0.0444444" />
                             <point x="0.695652" y="0.988889" />
                             <point x="0.326087" y="0.988889" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LoadBear" sid="229797842425456">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="117829117655109">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="Sine2" sid="428059792881054">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="165161503040834" speed="5">
+                    <frame duration="1" hotspotX="0.49505" hotspotY="0.893258" original-source="D:\MEOW\TheSnackShack\Art_Menus\Final\Load\LoadBear.png">
+                        <collision-poly>
+                            <point x="0.118812" y="0.0168539" />
+                            <point x="0.876238" y="0.011236" />
+                            <point x="0.722772" y="0.893258" />
+                            <point x="0.49505" y="0.994382" />
+                            <point x="0.277228" y="0.893258" />
                         </collision-poly>
                     </frame>
                 </animation>

@@ -15,7 +15,7 @@
     <layers>
         <layer name="BG" sid="906182248125349">
             <initially-visible>1</initially-visible>
-            <background-color>255,255,255</background-color>
+            <background-color>204,204,102</background-color>
             <transparent>0</transparent>
             <parallax>
                 <x>1</x>
@@ -166,7 +166,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-6.860039234</x>
+                        <x>-104.412605286</x>
                         <y>307.737060547</y>
                         <z>0</z>
                         <width>160</width>
@@ -174,6 +174,56 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="LoadBear" uid="82">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>3</period>
+                                <period-random>1</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>75</magnitude>
+                                <magnitude-random>25</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Sine2">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Angle</movement>
+                                <wave>Sine</wave>
+                                <period>1</period>
+                                <period-random>1</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>5</magnitude>
+                                <magnitude-random>5</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>161.239578247</x>
+                        <y>477.388793945</y>
+                        <z>0</z>
+                        <width>202</width>
+                        <height>178</height>
+                        <depth>0</depth>
+                        <hotspotX>0.495049506</hotspotX>
+                        <hotspotY>0.893258452</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -204,7 +254,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-10.587548256</x>
+                        <x>-108.140113831</x>
                         <y>426.204162598</y>
                         <z>0</z>
                         <width>160</width>
@@ -241,7 +291,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>333.327178955</x>
+                        <x>418.531311035</x>
                         <y>307.737060547</y>
                         <z>0</z>
                         <width>160</width>
@@ -279,7 +329,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>329.59967041</x>
+                        <x>414.803833008</x>
                         <y>426.204162598</y>
                         <z>0</z>
                         <width>160</width>
@@ -350,11 +400,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>33.469818115</x>
+                        <x>47.749191284</x>
                         <y>102.837081909</y>
                         <z>0</z>
-                        <width>251.105987549</width>
-                        <height>100.159873962</height>
+                        <width>222.547241211</width>
+                        <height>88.768501282</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -367,7 +417,7 @@
                         <character-height>16</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
                         <text>SNACK SHACK</text>
-                        <scale>2</scale>
+                        <scale>2.5</scale>
                         <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -380,10 +430,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>159.469818115</x>
-                        <y>148.837081909</y>
+                        <y>147.597473145</y>
                         <z>0</z>
-                        <width>200</width>
-                        <height>82.970596313</height>
+                        <width>307.438476563</width>
+                        <height>80.491378784</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -402,7 +452,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>159.469818115</x>
-                        <y>331</y>
+                        <y>293.8203125</y>
                         <z>0</z>
                         <width>196</width>
                         <height>72</height>
@@ -432,10 +482,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>159.469818115</x>
-                        <y>222.472579956</y>
+                        <y>209.794189453</y>
                         <z>0</z>
-                        <width>306</width>
-                        <height>36</height>
+                        <width>215.275375366</width>
+                        <height>25.326515198</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -470,7 +520,7 @@
                         <character-width>16</character-width>
                         <character-height>16</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
-                        <text>Brian Chung, Rebeca Jimenez, David Kirman</text>
+                        <text>Brian Chung, Rebeca Jiminez, David Kirman</text>
                         <scale>0.45</scale>
                         <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Center</horizontal-alignment>

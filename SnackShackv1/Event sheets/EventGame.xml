@@ -198,533 +198,609 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="440946281454541">
-            <conditions />
-            <actions />
+        <comment></comment>
+        <event-block sid="641551227519174">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="243440249089340" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="668633990222185" type="SpriteFont">
+                    <param id="0" name="Text">highscore &amp; newline &amp; newline &amp; score</param>
+                </action>
+                <action id="5" name="Set frame" sid="108881918250830" type="kakeUI">
+                    <param id="0" name="Frame number">Aisle-1</param>
+                </action>
+            </actions>
         </event-block>
         <event-block sid="419501369886983">
             <conditions />
             <actions />
         </event-block>
-        <comment>Prevents player from placing food below a tower</comment>
-        <event-block sid="445122655136800">
-            <conditions>
-                <condition id="-8" name="Compare two values" sid="402882921848808" type="System">
-                    <param id="0" name="First value">Touch.Y</param>
-                    <param id="1" name="Comparison">2</param>
-                    <param id="2" name="Second value">food.Y</param>
-                </condition>
-            </conditions>
-            <actions />
+        <event-group description="" sid="907814159306160" title="Place Food">
             <sub-events>
-                <event-block sid="934665060261626">
-                    <conditions>
-                        <condition id="1" name="On any touch end" sid="259165636407221" type="Touch" />
-                        <condition id="4" inverted="1" name="Is touching object" sid="259841217623966" type="Touch">
-                            <param id="0" name="Object">menuButtonHome</param>
-                        </condition>
-                        <condition id="-9" inverted="1" name="Layer is visible" sid="736912870778564" type="System">
-                            <param id="0" name="Layer">&quot;End&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-3" name="Create object" sid="336498706007513" type="System">
-                            <param id="0" name="Object to create">Particles</param>
-                            <param id="1" name="Layer">0</param>
-                            <param id="2" name="X">Touch.X(1)</param>
-                            <param id="3" name="Y">Touch.Y(1)</param>
-                        </action>
-                        <action id="-3" name="Create object" sid="452936522550258" type="System">
-                            <param id="0" name="Object to create">food</param>
-                            <param id="1" name="Layer">1</param>
-                            <param id="2" name="X">Touch.X(1)</param>
-                            <param id="3" name="Y">Touch.Y(1)</param>
-                        </action>
-                        <action id="-18" name="Rotate clockwise" sid="217028978729511" type="food">
-                            <param id="0" name="Degrees">random(-2,2)</param>
-                        </action>
-                        <action id="9" name="Set scale" sid="622069795919502" type="food">
-                            <param id="0" name="Scale">random(0.91, 1.09)</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="660635155681721" type="System">
-                            <param id="0" name="Variable">Variable1</param>
-                            <param id="1" name="Value">Touch.X(1)</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="491713492203426" type="System">
-                            <param id="0" name="Variable">Variable2</param>
-                            <param id="1" name="Value">Touch.Y(1)</param>
-                        </action>
-                        <action id="-10" name="Add to" sid="972870610155091" type="System">
-                            <param id="0" name="Variable">score</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="3" name="Set at XY" sid="766514119068156" type="FoodScores">
-                            <param id="0" name="X">Aisle</param>
-                            <param id="1" name="Y">0</param>
-                            <param id="2" name="Value">Self.CurValue + 1</param>
-                        </action>
-                    </actions>
+                <event-block sid="299903361001319">
+                    <conditions />
+                    <actions />
                 </event-block>
-            </sub-events>
-        </event-block>
-        <comment></comment>
-        <event-block sid="553180706968894">
-            <conditions>
-                <condition id="-1" name="Every tick" sid="331805349322329" type="System" />
-            </conditions>
-            <actions>
-                <action id="0" name="Set text" sid="885761010728645" type="SpriteFont">
-                    <param id="0" name="Text">highscore &amp; newline &amp; newline &amp; score</param>
-                </action>
-                <action id="5" name="Set frame" sid="975596041274079" type="kakeUI">
-                    <param id="0" name="Frame number">Aisle-1</param>
-                </action>
-            </actions>
-        </event-block>
-        <comment>Camera Zooming</comment>
-        <event-block sid="197216366504993">
-            <conditions>
-                <condition id="-8" name="Compare two values" sid="237885228421800" type="System">
-                    <param id="0" name="First value">food.Count</param>
-                    <param id="1" name="Comparison">2</param>
-                    <param id="2" name="Second value">20</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-20" name="Set layout scale" sid="907968272621600" type="System">
-                    <param id="0" name="Scale">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="999227063092815">
-            <conditions>
-                <condition id="-8" name="Compare two values" sid="461031877605545" type="System">
-                    <param id="0" name="First value">food.Count</param>
-                    <param id="1" name="Comparison">5</param>
-                    <param id="2" name="Second value">20</param>
-                </condition>
-                <condition id="-8" name="Compare two values" sid="423010383743119" type="System">
-                    <param id="0" name="First value">food.Count</param>
-                    <param id="1" name="Comparison">2</param>
-                    <param id="2" name="Second value">30</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-20" name="Set layout scale" sid="119105921617258" type="System">
-                    <param id="0" name="Scale">lerp(LayoutScale, 0.9, 0.05)</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="662219711597873">
-            <conditions>
-                <condition id="-8" name="Compare two values" sid="381098225895821" type="System">
-                    <param id="0" name="First value">food.Count</param>
-                    <param id="1" name="Comparison">5</param>
-                    <param id="2" name="Second value">30</param>
-                </condition>
-                <condition id="-8" name="Compare two values" sid="403066368538457" type="System">
-                    <param id="0" name="First value">food.Count</param>
-                    <param id="1" name="Comparison">2</param>
-                    <param id="2" name="Second value">50</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-20" name="Set layout scale" sid="160904055587026" type="System">
-                    <param id="0" name="Scale">lerp(LayoutScale, 0.8, 0.04)</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="511241608270756">
-            <conditions>
-                <condition id="-8" name="Compare two values" sid="179983998710723" type="System">
-                    <param id="0" name="First value">food.Count</param>
-                    <param id="1" name="Comparison">5</param>
-                    <param id="2" name="Second value">50</param>
-                </condition>
-                <condition id="-8" name="Compare two values" sid="750000130810895" type="System">
-                    <param id="0" name="First value">food.Count</param>
-                    <param id="1" name="Comparison">2</param>
-                    <param id="2" name="Second value">80</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-20" name="Set layout scale" sid="592877261758243" type="System">
-                    <param id="0" name="Scale">lerp(LayoutScale, 0.7, 0.02)</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="111707702639869">
-            <conditions>
-                <condition id="-8" name="Compare two values" sid="348596444373254" type="System">
-                    <param id="0" name="First value">food.Count</param>
-                    <param id="1" name="Comparison">5</param>
-                    <param id="2" name="Second value">80</param>
-                </condition>
-                <condition id="-8" name="Compare two values" sid="997163756100875" type="System">
-                    <param id="0" name="First value">food.Count</param>
-                    <param id="1" name="Comparison">2</param>
-                    <param id="2" name="Second value">130</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-20" name="Set layout scale" sid="565305556521041" type="System">
-                    <param id="0" name="Scale">lerp(LayoutScale, 0.5, 0.01)</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="181582091066947">
-            <conditions>
-                <condition id="-8" name="Compare two values" sid="719731700033097" type="System">
-                    <param id="0" name="First value">food.Count</param>
-                    <param id="1" name="Comparison">5</param>
-                    <param id="2" name="Second value">130</param>
-                </condition>
-                <condition id="-8" name="Compare two values" sid="657108874020910" type="System">
-                    <param id="0" name="First value">food.Count</param>
-                    <param id="1" name="Comparison">2</param>
-                    <param id="2" name="Second value">210</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-20" name="Set layout scale" sid="438216349728988" type="System">
-                    <param id="0" name="Scale">lerp(LayoutScale, 0.3, 0.01)</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="953161980819321">
-            <conditions>
-                <condition id="-8" name="Compare two values" sid="887511505842701" type="System">
-                    <param id="0" name="First value">food.Count</param>
-                    <param id="1" name="Comparison">5</param>
-                    <param id="2" name="Second value">210</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-20" name="Set layout scale" sid="968080194017618" type="System">
-                    <param id="0" name="Scale">lerp(LayoutScale, 0.1, 0.01)</param>
-                </action>
-            </actions>
-        </event-block>
-        <comment>Camera panning</comment>
-        <event-block sid="197393009485048">
-            <conditions>
-                <condition id="-14" name="Compare variable" sid="854995032611810" type="System">
-                    <param id="0" name="Variable">Variable2</param>
-                    <param id="1" name="Comparison">2</param>
-                    <param id="2" name="Value">camera.Y</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-3" name="Set position" sid="627207811928165" type="camera">
-                    <param id="0" name="X">lerp(camera.X, camera.X, 0.02)</param>
-                    <param id="1" name="Y">lerp(camera.Y, Variable2, 0.005)</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block disabled="1" sid="856738102614883">
-            <conditions>
-                <condition id="-8" name="Compare two values" sid="274841552912698" type="System">
-                    <param id="0" name="First value">camera.Y - wavaSurfacce.Y</param>
-                    <param id="1" name="Comparison">4</param>
-                    <param id="2" name="Second value">720</param>
-                </condition>
-            </conditions>
-            <actions />
-        </event-block>
-        <event-block disabled="1" sid="257164789950010">
-            <conditions>
-                <condition id="-8" name="Compare two values" sid="244694206559484" type="System">
-                    <param id="0" name="First value">distance(camera.X, camera.Y, platform.X, platform.Y)</param>
-                    <param id="1" name="Comparison">4</param>
-                    <param id="2" name="Second value">ViewportBottom(1) - ViewportTop(1) - 480</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action disabled="1" id="-20" name="Set layout scale" sid="926126039734413" type="System">
-                    <param id="0" name="Scale">lerp(LayoutScale, LayoutScale * 0.9, 0.05)</param>
-                </action>
-                <action id="-17" name="Set layer scale" sid="402588770853147" type="System">
-                    <param id="0" name="Layer">0</param>
-                    <param id="1" name="Scale">lerp(LayerScale(0), LayerScale(0) * 0.9, 0.05)</param>
-                </action>
-                <action id="-17" name="Set layer scale" sid="700820684311372" type="System">
-                    <param id="0" name="Layer">1</param>
-                    <param id="1" name="Scale">lerp(LayerScale(1), LayerScale(1) * 0.9, 0.05)</param>
-                </action>
-                <action id="-17" name="Set layer scale" sid="291265895917605" type="System">
-                    <param id="0" name="Layer">2</param>
-                    <param id="1" name="Scale">lerp(LayerScale(2), LayerScale(2) * 0.9, 0.05)</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block disabled="1" sid="289316574604172">
-            <conditions>
-                <condition id="-8" name="Compare two values" sid="912990798387283" type="System">
-                    <param id="0" name="First value">distance(camera.X, camera.Y, platform.X, platform.Y)</param>
-                    <param id="1" name="Comparison">2</param>
-                    <param id="2" name="Second value">ViewportBottom(1) - ViewportTop(1) - 400</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action disabled="1" id="-20" name="Set layout scale" sid="334942275352613" type="System">
-                    <param id="0" name="Scale">lerp(LayoutScale, LayoutScale * 1.1, 0.0125)</param>
-                </action>
-                <action id="-17" name="Set layer scale" sid="730453576888813" type="System">
-                    <param id="0" name="Layer">0</param>
-                    <param id="1" name="Scale">lerp(LayerScale(0), LayerScale(0) * 1.1, 0.0125)</param>
-                </action>
-                <action id="-17" name="Set layer scale" sid="774384055440350" type="System">
-                    <param id="0" name="Layer">1</param>
-                    <param id="1" name="Scale">lerp(LayerScale(1), LayerScale(1) * 1.1, 0.0125)</param>
-                </action>
-                <action id="-17" name="Set layer scale" sid="404462845983392" type="System">
-                    <param id="0" name="Layer">2</param>
-                    <param id="1" name="Scale">lerp(LayerScale(2), LayerScale(2) * 1.1, 0.0125)</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block disabled="1" sid="510709901398363">
-            <conditions>
-                <condition id="-8" name="Compare two values" sid="183622540873508" type="System">
-                    <param id="0" name="First value">LayerScale(0)</param>
-                    <param id="1" name="Comparison">2</param>
-                    <param id="2" name="Second value">0.33</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-17" name="Set layer scale" sid="465496009750265" type="System">
-                    <param id="0" name="Layer">0</param>
-                    <param id="1" name="Scale">0.33</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block disabled="1" sid="555244248115975">
-            <conditions>
-                <condition id="-3" inverted="1" name="Is on-screen" sid="374574802501312" type="food" />
-                <condition behavior="Physics" id="1" name="Compare velocity" sid="631670760808221" type="food">
-                    <param id="0" name="Which">1</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">0</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="362561992784893" type="food" />
-            </actions>
-        </event-block>
-        <comment></comment>
-        <event-block sid="510817763491829">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="535013630963056" type="food">
-                    <param id="0" name="Object">Ground</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-34" name="Set layer background color" sid="695802237619875" type="System">
-                    <param id="0" name="Layer">0</param>
-                    <param id="1" name="Color">rgb(255, 32, 32)</param>
-                </action>
-                <action id="-16" name="Wait" sid="406030881288601" type="System">
-                    <param id="0" name="Seconds">1.0</param>
-                </action>
-                <action id="-34" name="Set layer background color" sid="803502977738735" type="System">
-                    <param id="0" name="Layer">0</param>
-                    <param id="1" name="Color">rgb(204, 255, 255)</param>
-                </action>
-                <action id="-9" name="Set value" sid="826789462995148" type="System">
-                    <param id="0" name="Variable">score</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-                <action id="-9" name="Set value" sid="697384375467238" type="System">
-                    <param id="0" name="Variable">Variable1</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-                <action id="-9" name="Set value" sid="270591001337781" type="System">
-                    <param id="0" name="Variable">Variable2</param>
-                    <param id="1" name="Value">550</param>
-                </action>
-                <action disabled="1" id="-26" name="Restart layout" sid="670669339305168" type="System" />
-                <action disabled="1" id="-2" name="Go to layout" sid="516898317151837" type="System">
-                    <param id="0" name="Layout">EndGame</param>
-                </action>
-                <action id="-2" name="Go to layout" sid="472714565122052" type="System">
-                    <param id="0" name="Layout">Title</param>
-                </action>
-            </actions>
-        </event-block>
-        <comment></comment>
-        <event-block sid="817551694286191">
-            <conditions>
-                <condition id="2" name="Is in touch" sid="987833577485790" type="Touch" />
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="466203600193098">
+                <comment>Prevents player from placing food below a tower</comment>
+                <event-block sid="697737635003980">
                     <conditions>
-                        <condition id="-13" name="Pick nth instance" sid="383339706421730" type="System">
-                            <param id="0" name="Object">food</param>
-                            <param id="1" name="Instance">food.Count - 1</param>
+                        <condition id="-8" name="Compare two values" sid="969745748899626" type="System">
+                            <param id="0" name="First value">Touch.Y</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">food.Y</param>
                         </condition>
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="384935287220002">
+                        <event-block sid="623320915720129">
                             <conditions>
-                                <condition id="-8" name="Compare two values" sid="595083159698414" type="System">
-                                    <param id="0" name="First value">Touch.Y(1)</param>
-                                    <param id="1" name="Comparison">2</param>
-                                    <param id="2" name="Second value">food.Y</param>
+                                <condition id="1" name="On any touch end" sid="228988759753395" type="Touch" />
+                                <condition id="4" inverted="1" name="Is touching object" sid="889847557839427" type="Touch">
+                                    <param id="0" name="Object">menuButtonHome</param>
+                                </condition>
+                                <condition id="-9" inverted="1" name="Layer is visible" sid="934758315871748" type="System">
+                                    <param id="0" name="Layer">&quot;End&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-3" name="Set position" sid="483908172032617" type="kakeUI">
-                                    <param id="0" name="X">Touch.X(1)</param>
-                                    <param id="1" name="Y">Touch.Y(1)</param>
+                                <action id="-3" name="Create object" sid="613936422915302" type="System">
+                                    <param id="0" name="Object to create">Particles</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">Touch.X(1)</param>
+                                    <param id="3" name="Y">Touch.Y(1)</param>
                                 </action>
-                                <action id="-15" name="Set visible" sid="825696776246006" type="kakeUI">
-                                    <param id="0" name="Visibility">1</param>
+                                <action id="-3" name="Create object" sid="671655010041973" type="System">
+                                    <param id="0" name="Object to create">food</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="X">Touch.X(1)</param>
+                                    <param id="3" name="Y">Touch.Y(1)</param>
                                 </action>
-                                <action id="-15" name="Set visible" sid="742669322397828" type="kakeIndicator">
-                                    <param id="0" name="Visibility">0</param>
+                                <action id="-18" name="Rotate clockwise" sid="590170962267651" type="food">
+                                    <param id="0" name="Degrees">random(-2,2)</param>
                                 </action>
-                            </actions>
-                            <sub-events>
-                                <event-block sid="249527633273502">
-                                    <conditions>
-                                        <condition id="-4" name="Trigger once while true" sid="391174321388698" type="System" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="11" name="Set collisions enabled" sid="827220699502302" type="kakeIndicator">
-                                            <param id="0" name="Collisions">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="273981238029988">
-                            <conditions>
-                                <condition id="-8" inverted="1" name="Compare two values" sid="301211495951543" type="System">
-                                    <param id="0" name="First value">Touch.Y(1)</param>
-                                    <param id="1" name="Comparison">3</param>
-                                    <param id="2" name="Second value">food.Y</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-3" name="Set position" sid="981336417531733" type="kakeIndicator">
-                                    <param id="0" name="X">Touch.X(1)</param>
-                                    <param id="1" name="Y">Touch.Y(1)</param>
+                                <action id="9" name="Set scale" sid="449244021178805" type="food">
+                                    <param id="0" name="Scale">random(0.91, 1.09)</param>
                                 </action>
-                                <action id="-15" name="Set visible" sid="501165720824432" type="kakeIndicator">
-                                    <param id="0" name="Visibility">1</param>
+                                <action id="-9" name="Set value" sid="731145003372001" type="System">
+                                    <param id="0" name="Variable">Variable1</param>
+                                    <param id="1" name="Value">Touch.X(1)</param>
                                 </action>
-                                <action id="-15" name="Set visible" sid="186329244190175" type="kakeUI">
-                                    <param id="0" name="Visibility">0</param>
+                                <action id="-9" name="Set value" sid="758713232826654" type="System">
+                                    <param id="0" name="Variable">Variable2</param>
+                                    <param id="1" name="Value">Touch.Y(1)</param>
                                 </action>
-                            </actions>
-                            <sub-events>
-                                <event-block sid="302480675174646">
-                                    <conditions>
-                                        <condition id="-4" name="Trigger once while true" sid="335166020011927" type="System" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="11" name="Set collisions enabled" sid="315870809670661" type="kakeIndicator">
-                                            <param id="0" name="Collisions">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="861337169731137">
-            <conditions>
-                <condition id="-22" name="Else" sid="226692174593795" type="System" />
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="573508417247608">
-                    <conditions>
-                        <condition id="-4" name="Trigger once while true" sid="811474996596303" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-1" name="Set X" sid="144899339447185" type="kakeIndicator">
-                            <param id="0" name="X">900</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="622872394739569" type="kakeIndicator">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="967419669962598" type="kakeUI">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <comment></comment>
-        <event-block sid="605343639126120">
-            <conditions>
-                <condition id="-18" name="On created" sid="746443943334478" type="food" />
-            </conditions>
-            <actions>
-                <action id="5" name="Set frame" sid="395862370571529" type="food">
-                    <param id="0" name="Frame number">Aisle-1</param>
-                </action>
-                <action id="2" name="Stop" sid="550231537283102" type="food" />
-            </actions>
-        </event-block>
-        <comment></comment>
-        <event-block sid="842717112884157">
-            <conditions>
-                <condition id="-14" name="Compare variable" sid="719950330974754" type="System">
-                    <param id="0" name="Variable">score</param>
-                    <param id="1" name="Comparison">5</param>
-                    <param id="2" name="Value">50</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="674817156182093">
-                    <conditions>
-                        <condition id="-8" name="Compare two values" sid="681855970236236" type="System">
-                            <param id="0" name="First value">score%50</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Second value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="295531637978641">
-                            <conditions>
-                                <condition id="-4" name="Trigger once while true" sid="832194469595545" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Add to" sid="661097876642379" type="System">
-                                    <param id="0" name="Variable">Aisle</param>
+                                <action id="-10" name="Add to" sid="685670367906860" type="System">
+                                    <param id="0" name="Variable">score</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="5" name="Set frame" sid="706278421893765" type="AisleNumbers">
-                                    <param id="0" name="Frame number">Aisle</param>
+                                <action id="3" name="Set at XY" sid="177067600511521" type="FoodScores">
+                                    <param id="0" name="X">Aisle</param>
+                                    <param id="1" name="Y">0</param>
+                                    <param id="2" name="Value">Self.CurValue + 1</param>
                                 </action>
-                                <action id="2" name="Stop" sid="467340137764116" type="AisleNumbers" />
-                                <action behavior="Fade" id="0" name="Restart fade" sid="918758353142002" type="AisleNumbers" />
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block sid="369554468786150">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="339254808304527">
+                    <conditions />
+                    <actions />
+                </event-block>
             </sub-events>
-        </event-block>
-        <event-group description="" sid="913731803682852" title="Group">
+        </event-group>
+        <event-group description="" sid="798914006124238" title="Touch">
             <sub-events>
-                <event-block sid="627213029313979">
+                <event-block sid="824103272433254">
                     <conditions />
                     <actions />
                 </event-block>
-                <event-block sid="802504814297846">
+                <comment></comment>
+                <event-block sid="881325334496429">
+                    <conditions>
+                        <condition id="2" name="Is in touch" sid="234136845629434" type="Touch" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="643064059404148">
+                            <conditions>
+                                <condition id="-13" name="Pick nth instance" sid="352941687535770" type="System">
+                                    <param id="0" name="Object">food</param>
+                                    <param id="1" name="Instance">food.Count - 1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="934581146058123">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="188992858582521" type="System">
+                                            <param id="0" name="First value">Touch.Y(1)</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">food.Y</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="920983165300440" type="kakeUI">
+                                            <param id="0" name="X">Touch.X(1)</param>
+                                            <param id="1" name="Y">Touch.Y(1)</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="363542179792037" type="kakeUI">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="745575597873479" type="kakeIndicator">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="541114392080238">
+                                            <conditions>
+                                                <condition id="-4" name="Trigger once while true" sid="738787220986014" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="11" name="Set collisions enabled" sid="296271066583284" type="kakeIndicator">
+                                                    <param id="0" name="Collisions">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="496962543934065">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Compare two values" sid="483111666303286" type="System">
+                                            <param id="0" name="First value">Touch.Y(1)</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Second value">food.Y</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="302913619165568" type="kakeIndicator">
+                                            <param id="0" name="X">Touch.X(1)</param>
+                                            <param id="1" name="Y">Touch.Y(1)</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="473831936105954" type="kakeIndicator">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="177611713854065" type="kakeUI">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="267954606834361">
+                                            <conditions>
+                                                <condition id="-4" name="Trigger once while true" sid="585213975519756" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="11" name="Set collisions enabled" sid="721703799665161" type="kakeIndicator">
+                                                    <param id="0" name="Collisions">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="867957746329143">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="620980413929527" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="428742134973389">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="807486402518878" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="755693347089603" type="kakeIndicator">
+                                    <param id="0" name="X">900</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="525323511402212" type="kakeIndicator">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="726048865497859" type="kakeUI">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="271891390041122">
                     <conditions />
                     <actions />
                 </event-block>
-                <event-block sid="639499972368095">
+                <event-block sid="105424786449624">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="470804488656527" title="Camera Zoom">
+            <sub-events>
+                <event-block sid="275016072821855">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="166740661092203">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <comment>Camera Zooming</comment>
+                <event-block sid="330807117607306">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="748848995873753" type="System">
+                            <param id="0" name="First value">food.Count</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">20</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-20" name="Set layout scale" sid="463066421567986" type="System">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="505700163526956">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="351506121083721" type="System">
+                            <param id="0" name="First value">food.Count</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">20</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="289238210362093" type="System">
+                            <param id="0" name="First value">food.Count</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">30</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-20" name="Set layout scale" sid="716720364095842" type="System">
+                            <param id="0" name="Scale">lerp(LayoutScale, 0.9, 0.05)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="814516880051645">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="567848521056270" type="System">
+                            <param id="0" name="First value">food.Count</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">30</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="639974862548300" type="System">
+                            <param id="0" name="First value">food.Count</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">50</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-20" name="Set layout scale" sid="223216269584402" type="System">
+                            <param id="0" name="Scale">lerp(LayoutScale, 0.8, 0.04)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="567634077341659">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="280263346798396" type="System">
+                            <param id="0" name="First value">food.Count</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">50</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="711583603157677" type="System">
+                            <param id="0" name="First value">food.Count</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">80</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-20" name="Set layout scale" sid="991186629367331" type="System">
+                            <param id="0" name="Scale">lerp(LayoutScale, 0.7, 0.02)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="703530951520273">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="715224542775542" type="System">
+                            <param id="0" name="First value">food.Count</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">80</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="742835093990741" type="System">
+                            <param id="0" name="First value">food.Count</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">130</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-20" name="Set layout scale" sid="439724782715920" type="System">
+                            <param id="0" name="Scale">lerp(LayoutScale, 0.5, 0.01)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="609161365727540">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="187455917041676" type="System">
+                            <param id="0" name="First value">food.Count</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">130</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="268943704627013" type="System">
+                            <param id="0" name="First value">food.Count</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">210</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-20" name="Set layout scale" sid="530439122800460" type="System">
+                            <param id="0" name="Scale">lerp(LayoutScale, 0.3, 0.01)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="480582911673820">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="720133937747557" type="System">
+                            <param id="0" name="First value">food.Count</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">210</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-20" name="Set layout scale" sid="842478894941308" type="System">
+                            <param id="0" name="Scale">lerp(LayoutScale, 0.1, 0.01)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="414009191460555">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="989224161480194" title="Camera Pan">
+            <sub-events>
+                <event-block sid="587934868560765">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <comment>Camera panning</comment>
+                <event-block sid="419458117234827">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="306017526864095" type="System">
+                            <param id="0" name="Variable">Variable2</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">camera.Y</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="788608885779357" type="camera">
+                            <param id="0" name="X">lerp(camera.X, camera.X, 0.02)</param>
+                            <param id="1" name="Y">lerp(camera.Y, Variable2, 0.005)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="107877455816260">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block disabled="1" sid="504541202846093">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="696748742411128" type="System">
+                            <param id="0" name="First value">camera.Y - wavaSurfacce.Y</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">720</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block disabled="1" sid="777968028677665">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="695769431640440" type="System">
+                            <param id="0" name="First value">distance(camera.X, camera.Y, platform.X, platform.Y)</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">ViewportBottom(1) - ViewportTop(1) - 480</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="-20" name="Set layout scale" sid="348541732027227" type="System">
+                            <param id="0" name="Scale">lerp(LayoutScale, LayoutScale * 0.9, 0.05)</param>
+                        </action>
+                        <action id="-17" name="Set layer scale" sid="185942337543120" type="System">
+                            <param id="0" name="Layer">0</param>
+                            <param id="1" name="Scale">lerp(LayerScale(0), LayerScale(0) * 0.9, 0.05)</param>
+                        </action>
+                        <action id="-17" name="Set layer scale" sid="666113866181334" type="System">
+                            <param id="0" name="Layer">1</param>
+                            <param id="1" name="Scale">lerp(LayerScale(1), LayerScale(1) * 0.9, 0.05)</param>
+                        </action>
+                        <action id="-17" name="Set layer scale" sid="889402680690022" type="System">
+                            <param id="0" name="Layer">2</param>
+                            <param id="1" name="Scale">lerp(LayerScale(2), LayerScale(2) * 0.9, 0.05)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="594153970327930">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="288128561099309" type="System">
+                            <param id="0" name="First value">distance(camera.X, camera.Y, platform.X, platform.Y)</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">ViewportBottom(1) - ViewportTop(1) - 400</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="-20" name="Set layout scale" sid="930886957831239" type="System">
+                            <param id="0" name="Scale">lerp(LayoutScale, LayoutScale * 1.1, 0.0125)</param>
+                        </action>
+                        <action id="-17" name="Set layer scale" sid="990516044550404" type="System">
+                            <param id="0" name="Layer">0</param>
+                            <param id="1" name="Scale">lerp(LayerScale(0), LayerScale(0) * 1.1, 0.0125)</param>
+                        </action>
+                        <action id="-17" name="Set layer scale" sid="484462591843556" type="System">
+                            <param id="0" name="Layer">1</param>
+                            <param id="1" name="Scale">lerp(LayerScale(1), LayerScale(1) * 1.1, 0.0125)</param>
+                        </action>
+                        <action id="-17" name="Set layer scale" sid="196175058271217" type="System">
+                            <param id="0" name="Layer">2</param>
+                            <param id="1" name="Scale">lerp(LayerScale(2), LayerScale(2) * 1.1, 0.0125)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="130195069652224">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="889764858679232" type="System">
+                            <param id="0" name="First value">LayerScale(0)</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">0.33</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-17" name="Set layer scale" sid="245284951791718" type="System">
+                            <param id="0" name="Layer">0</param>
+                            <param id="1" name="Scale">0.33</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="559420276802151">
+                    <conditions>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="770541758248478" type="food" />
+                        <condition behavior="Physics" id="1" name="Compare velocity" sid="614802671847012" type="food">
+                            <param id="0" name="Which">1</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="649490460818425" type="food" />
+                    </actions>
+                </event-block>
+                <event-block sid="387017841378495">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="364206200313995" title="Lose">
+            <sub-events>
+                <event-block sid="525763399279852">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <comment></comment>
+                <event-block sid="892286684294458">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="531101275828099" type="food">
+                            <param id="0" name="Object">Ground</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-34" name="Set layer background color" sid="652416221465644" type="System">
+                            <param id="0" name="Layer">0</param>
+                            <param id="1" name="Color">rgb(255, 32, 32)</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="451609757434945" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-34" name="Set layer background color" sid="301875257115074" type="System">
+                            <param id="0" name="Layer">0</param>
+                            <param id="1" name="Color">rgb(204, 255, 255)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="879414811627308" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="978878907921138" type="System">
+                            <param id="0" name="Variable">Variable1</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="627714973325369" type="System">
+                            <param id="0" name="Variable">Variable2</param>
+                            <param id="1" name="Value">550</param>
+                        </action>
+                        <action disabled="1" id="-26" name="Restart layout" sid="823118555052076" type="System" />
+                        <action disabled="1" id="-2" name="Go to layout" sid="630742065312935" type="System">
+                            <param id="0" name="Layout">EndGame</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="404583244314627" type="System">
+                            <param id="0" name="Layout">Title</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="326070981172431">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="513736459881310">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="444543646374854" title="Progression">
+            <sub-events>
+                <event-block sid="207081201942076">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <comment></comment>
+                <event-block sid="616758063439304">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="673616781540333" type="food" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="464384633651422" type="food">
+                            <param id="0" name="Frame number">Aisle-1</param>
+                        </action>
+                        <action id="2" name="Stop" sid="942106332127052" type="food" />
+                    </actions>
+                </event-block>
+                <comment></comment>
+                <event-block sid="283028027607295">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="732328933674454" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">50</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="293863909388939">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="954186938028190" type="System">
+                                    <param id="0" name="First value">score%50</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="873948474822591">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="916357290046807" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Add to" sid="797411022533560" type="System">
+                                            <param id="0" name="Variable">Aisle</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="887890864766255" type="AisleNumbers">
+                                            <param id="0" name="Frame number">Aisle</param>
+                                        </action>
+                                        <action id="2" name="Stop" sid="762532355389541" type="AisleNumbers" />
+                                        <action behavior="Fade" id="0" name="Restart fade" sid="244818764560898" type="AisleNumbers" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="608264009209059">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="402177563546671">
                     <conditions />
                     <actions />
                 </event-block>
@@ -741,22 +817,6 @@
                     <actions />
                 </event-block>
                 <event-block sid="748431291540517">
-                    <conditions />
-                    <actions />
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-group description="" sid="386693733236590" title="Group3">
-            <sub-events>
-                <event-block sid="722852741645609">
-                    <conditions />
-                    <actions />
-                </event-block>
-                <event-block sid="421090577182512">
-                    <conditions />
-                    <actions />
-                </event-block>
-                <event-block sid="804539741347665">
                     <conditions />
                     <actions />
                 </event-block>
