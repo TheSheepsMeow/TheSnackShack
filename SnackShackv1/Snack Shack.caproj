@@ -546,7 +546,7 @@
         </object-type>
         <object-type name="bgSheeps" sid="256860969285368">
             <plugin id="TiledBg" />
-            <texture original-source="C:\Users\Pitchfork\Desktop\tilinesheeps.png" />
+            <texture original-source="D:\MEOW\TheSnackShack\Art_Menus\Final\Load\LoadBG.png" />
         </object-type>
         <object-type name="Title_BG" sid="147542571563814">
             <plugin id="Sprite" />
@@ -692,6 +692,35 @@
                 <animation framecount="2" loop="1" name="Pressed" pingpong="0" repeatcount="1" repeatto="0" sid="186981467223422" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\MEOW\TheSnackShack\Art_Menus\Final\End\HomePressed_01.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\MEOW\TheSnackShack\Art_Menus\Final\End\HomePressed_02.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LoadBar_BG" sid="687935021700572">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="602645437691573" speed="5">
+                    <frame duration="1" hotspotX="0.451883" hotspotY="-2.57143" original-source="D:\MEOW\TheSnackShack\Art_Menus\Final\Load\LoadBar_BG.png">
+                        <collision-poly>
+                            <point x="0.451883" y="0.0285714" />
+                            <point x="0.635983" y="0.971429" />
+                            <point x="0.267782" y="0.971429" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LoadBar_Outside" sid="186041933963009">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="792481726548320" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\MEOW\TheSnackShack\Art_Menus\Final\Load\LoadBar_Outside.png">
+                        <collision-poly>
+                            <point x="0.51087" y="0.466667" />
+                            <point x="0.0543478" y="0.0444444" />
+                            <point x="0.695652" y="0.988889" />
+                            <point x="0.326087" y="0.988889" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
