@@ -198,7 +198,7 @@
                     </conditions>
                     <actions>
                         <action id="0" name="Set text" sid="639609718914679" type="textScore">
-                            <param id="0" name="Text">&quot;high score: &quot; &amp; highScore</param>
+                            <param id="0" name="Text">&quot;snacks stacked: &quot; &amp; highScore</param>
                         </action>
                     </actions>
                 </event-block>
@@ -289,7 +289,7 @@
                 <event-block sid="621234213883643">
                     <conditions>
                         <condition id="17" name="On tap object" sid="918597203390980" type="Touch">
-                            <param id="0" name="Object">ad</param>
+                            <param id="0" name="Object">MoreGames</param>
                         </condition>
                     </conditions>
                     <actions>

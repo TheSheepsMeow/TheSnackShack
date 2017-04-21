@@ -11,8 +11,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout order="0">Game</layout>
+        <layout active="1" order="3">Title</layout>
         <event-sheet order="1">EventGame</event-sheet>
-        <event-sheet active="1" order="2">Title</event-sheet>
+        <event-sheet order="2">Title</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -45,7 +46,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/AisleNumbers/" />
         <folder expanded="1" path="animation-folder/BadFood/" />
         <folder expanded="1" path="animation-folder/Warning/" />
-        <folder expanded="1" path="animation-folder/thesheepsmeow/" />
         <folder expanded="1" path="animation-folder/Title_BG/" />
         <folder expanded="1" path="animation-folder/muteButton/" />
         <folder expanded="1" path="animation-folder/menuButton/" />
@@ -58,5 +58,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/LoadBar_BG/" />
         <folder expanded="1" path="animation-folder/LoadBar_Outside/" />
         <folder expanded="1" path="animation-folder/LoadBear/" />
+        <folder expanded="1" path="animation-folder/MoreGames/" />
+        <folder expanded="1" path="animation-folder/SnackStacking_Title/" />
     </folders-expanded>
 </c2uistate>

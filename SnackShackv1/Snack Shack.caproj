@@ -535,15 +535,6 @@
             <plugin id="Spritefont2" />
             <texture />
         </object-type>
-        <object-type name="thesheepsmeow" sid="883879501129149">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="278258586868111" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\sheep0.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\sheep1.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="bgSheeps" sid="256860969285368">
             <plugin id="TiledBg" />
             <texture original-source="D:\MEOW\TheSnackShack\Art_Menus\Final\Load\LoadBG.png" />
@@ -596,18 +587,36 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="318906500293714" speed="0">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\reset.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\reset1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\brian\Downloads\ResetScore_01.png">
+                        <collision-poly>
+                            <point x="0.0972222" y="0.194444" />
+                            <point x="0.5" y="0.111111" />
+                            <point x="0.916667" y="0.166667" />
+                            <point x="0.972222" y="0.5" />
+                            <point x="0.944444" y="0.888889" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0694444" y="0.861111" />
+                            <point x="0.0555556" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\brian\Downloads\ResetScorePRESSED.png">
+                        <collision-poly>
+                            <point x="0.0833333" y="0.166667" />
+                            <point x="0.5" y="0.0277778" />
+                            <point x="0.930556" y="0.138889" />
+                            <point x="0.972222" y="0.5" />
+                            <point x="0.944444" y="0.888889" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0694444" y="0.861111" />
+                            <point x="0.0555556" y="0.5" />
+                        </collision-poly>
+                    </frame>
                 </animation>
                 <animation framecount="2" loop="1" name="Pressed" pingpong="0" repeatcount="1" repeatto="0" sid="488353465276821" speed="10">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\confirm.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\confirm1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\brian\Downloads\Confirm_01.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\brian\Downloads\ConfirmPRESSED.png" />
                 </animation>
             </animation-folder>
-        </object-type>
-        <object-type name="ad" sid="532401296823599">
-            <plugin id="NinePatch" />
-            <texture />
         </object-type>
         <object-type name="textResetScores" sid="297536176895497">
             <plugin id="Spritefont2" />
@@ -743,6 +752,51 @@
                             <point x="0.722772" y="0.893258" />
                             <point x="0.49505" y="0.994382" />
                             <point x="0.277228" y="0.893258" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MoreGames" sid="415302345858284">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="468439833580275" speed="5">
+                    <frame duration="1" hotspotX="0.501558" hotspotY="0.509804" original-source="C:\Users\brian\Downloads\MoreGames.png">
+                        <collision-poly>
+                            <point x="0.0155763" y="0.0980392" />
+                            <point x="0.498442" y="0.0392157" />
+                            <point x="0.984424" y="0.0980392" />
+                            <point x="0.996885" y="0.490196" />
+                            <point x="0.987539" y="0.921569" />
+                            <point x="0.498442" y="0.980392" />
+                            <point x="0.0155763" y="0.901961" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SnackStacking_Title" sid="412220308244293">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="375804487481129">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="Sine2" sid="106895045613802">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="341751360694708" speed="5">
+                    <frame duration="1" hotspotX="0.50173" hotspotY="0.5" original-source="C:\Users\brian\Downloads\SnackStacking_Title.png">
+                        <collision-poly>
+                            <point x="0.0726644" y="0.147887" />
+                            <point x="0.49827" y="0.190141" />
+                            <point x="0.906574" y="0.190141" />
+                            <point x="0.816609" y="0.5" />
+                            <point x="0.875433" y="0.746479" />
+                            <point x="0.49827" y="0.922535" />
+                            <point x="0.179931" y="0.633803" />
+                            <point x="0.211073" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>

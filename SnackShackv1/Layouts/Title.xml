@@ -373,67 +373,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>248.516815186</x>
-                        <y>80.994644165</y>
+                        <x>272.498046875</x>
+                        <y>31.235794067</y>
                         <z>0</z>
                         <width>72</width>
                         <height>36</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="titleBG" uid="48">
-                    <properties>
-                        <left-margin>16</left-margin>
-                        <right-margin>16</right-margin>
-                        <top-margin>16</top-margin>
-                        <bottom-margin>16</bottom-margin>
-                        <edges>Tile</edges>
-                        <fill>Tile</fill>
-                        <initial-visibility>Visible</initial-visibility>
-                        <hotspot>Top-left</hotspot>
-                        <seams>Overlap</seams>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>47.749191284</x>
-                        <y>102.837081909</y>
-                        <z>0</z>
-                        <width>222.547241211</width>
-                        <height>88.768501282</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <opacity>0.100000001</opacity>
-                    </world>
-                </instance>
-                <instance type="textTitle" uid="49">
-                    <properties>
-                        <character-width>16</character-width>
-                        <character-height>16</character-height>
-                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
-                        <text>SNACK SHACK</text>
-                        <scale>2.5</scale>
-                        <initial-visibility>Visible</initial-visibility>
-                        <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
-                        <hotspot>Center</hotspot>
-                        <wrapping>Word</wrapping>
-                        <character-spacing>0</character-spacing>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>159.469818115</x>
-                        <y>147.597473145</y>
-                        <z>0</z>
-                        <width>307.438476563</width>
-                        <height>80.491378784</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -463,6 +407,56 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="SnackStacking_Title" uid="44">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Size</movement>
+                                <wave>Triangle</wave>
+                                <period>2</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>10</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Sine2">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Angle</movement>
+                                <wave>Triangle</wave>
+                                <period>4</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>5</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>160.5</x>
+                        <y>134.372253418</y>
+                        <z>0</z>
+                        <width>289</width>
+                        <height>142</height>
+                        <depth>0</depth>
+                        <hotspotX>0.501730084</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
                 <instance type="textTitle" uid="51">
                     <properties>
                         <character-width>16</character-width>
@@ -482,7 +476,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>159.469818115</x>
-                        <y>209.794189453</y>
+                        <y>233.529937744</y>
                         <z>0</z>
                         <width>215.275375366</width>
                         <height>25.326515198</height>
@@ -520,7 +514,7 @@
                         <character-width>16</character-width>
                         <character-height>16</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
-                        <text>Brian Chung, Rebeca Jiminez, David Kirman</text>
+                        <text>Brian Chung, Rebeca Jimenez, David Kirman</text>
                         <scale>0.45</scale>
                         <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Center</horizontal-alignment>
@@ -534,7 +528,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>159.469818115</x>
-                        <y>414.083312988</y>
+                        <y>408.083312988</y>
                         <z>0</z>
                         <width>300</width>
                         <height>23.451385498</height>
@@ -550,10 +544,10 @@
                         <character-width>16</character-width>
                         <character-height>16</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
-                        <text>high score: 17</text>
+                        <text>snacks stacked: 170</text>
                         <scale>0.66</scale>
                         <initial-visibility>Visible</initial-visibility>
-                        <horizontal-alignment>Left</horizontal-alignment>
+                        <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
@@ -563,11 +557,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>34.613845825</x>
-                        <y>75.400268555</y>
+                        <x>116.93788147</x>
+                        <y>15.638586044</y>
                         <z>0</z>
-                        <width>167.911132813</width>
-                        <height>13.570407867</height>
+                        <width>86.124229431</width>
+                        <height>32.927021027</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -594,7 +588,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>249.512390137</x>
-                        <y>82.509368896</y>
+                        <y>-26.439224243</y>
                         <z>0</z>
                         <width>68.13822937</width>
                         <height>21</height>
@@ -605,33 +599,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ad" uid="52">
-                    <properties>
-                        <left-margin>16</left-margin>
-                        <right-margin>16</right-margin>
-                        <top-margin>16</top-margin>
-                        <bottom-margin>16</bottom-margin>
-                        <edges>Tile</edges>
-                        <fill>Tile</fill>
-                        <initial-visibility>Visible</initial-visibility>
-                        <hotspot>Top-left</hotspot>
-                        <seams>Overlap</seams>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>-0.530181885</x>
-                        <y>430</y>
-                        <z>0</z>
-                        <width>320</width>
-                        <height>50</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="thesheepsmeow" uid="54">
+                <instance type="MoreGames" uid="88">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -641,44 +609,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>26.008094788</x>
-                        <y>454.518188477</y>
+                        <x>160.5</x>
+                        <y>455</y>
                         <z>0</z>
-                        <width>40.275863647</width>
-                        <height>40.275863647</height>
+                        <width>321</width>
+                        <height>51</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="textTitle" uid="53">
-                    <properties>
-                        <character-width>16</character-width>
-                        <character-height>16</character-height>
-                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
-                        <text>MORE GAMES</text>
-                        <scale>1.25</scale>
-                        <initial-visibility>Visible</initial-visibility>
-                        <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
-                        <hotspot>Center</hotspot>
-                        <wrapping>Word</wrapping>
-                        <character-spacing>0</character-spacing>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>179.259521484</x>
-                        <y>455.053833008</y>
-                        <z>0</z>
-                        <width>228.385467529</width>
-                        <height>41.247390747</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.501557648</hotspotX>
+                        <hotspotY>0.509803951</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -769,11 +707,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>249.975097656</x>
-                        <y>15.441106796</y>
+                        <x>275.755187988</x>
+                        <y>5.302827835</y>
                         <z>0</z>
-                        <width>140.049835205</width>
-                        <height>30.882213593</height>
+                        <width>88.489593506</width>
+                        <height>10.60565567</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -787,7 +725,7 @@
                         <character-height>16</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
                         <text>Text</text>
-                        <scale>0.5</scale>
+                        <scale>0.3</scale>
                         <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Right</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
@@ -799,11 +737,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>208.975097656</x>
-                        <y>8.441106796</y>
+                        <x>253.583557129</x>
+                        <y>2.96614933</y>
                         <z>0</z>
-                        <width>109.030906677</width>
-                        <height>21.762180328</height>
+                        <width>64.422431946</width>
+                        <height>7.568656921</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
