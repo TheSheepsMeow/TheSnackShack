@@ -205,7 +205,7 @@
             </conditions>
             <actions>
                 <action id="0" name="Set text" sid="668633990222185" type="SpriteFont">
-                    <param id="0" name="Text">highscore &amp; newline &amp; newline &amp; score</param>
+                    <param id="0" name="Text">score &amp; &quot; / &quot; &amp; highscore</param>
                 </action>
                 <action id="5" name="Set frame" sid="108881918250830" type="kakeUI">
                     <param id="0" name="Frame number">Aisle-1</param>

@@ -4,11 +4,11 @@
     <description></description>
     <version>0.2</version>
     <author>The Sheep&apos;s Meow</author>
-    <author-email>community@thesheepsmeow.com</author-email>
-    <author-website>http://www.thesheepsmeow.com</author-website>
+    <author-email>games@thesheepsmeow.com</author-email>
+    <author-website>http://www.thesheepsmeow.com/html5</author-website>
     <app-id>com.mycompany.myapp</app-id>
     <unique-id>2m2oqhlgof90t</unique-id>
-    <saved-with-version>23900</saved-with-version>
+    <saved-with-version>24400</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
@@ -41,11 +41,11 @@
     <first-layout>Loader</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
-        <prop name="Clear background">Yes</prop>
+        <prop name="Clear background">No</prop>
         <prop name="Enable WebGL">On</prop>
         <prop name="Fullscreen in browser">Letterbox scale</prop>
         <prop name="Fullscreen scaling">High quality</prop>
-        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Loader style">Nothing (not recommended)</prop>
         <prop name="Orientations">Portrait</prop>
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
@@ -225,12 +225,12 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="460236439801953" speed="0">
-                    <frame duration="1" hotspotX="0.410526" hotspotY="0.143519" original-source="C:\Users\david\Downloads\SheepsMeowInternship\SnackCity\Sprites\BearPaw.png">
+                    <frame duration="1" hotspotX="0.505263" hotspotY="0.5" original-source="C:\Users\david\Downloads\SheepsMeowInternship\SnackCity\Sprites\BearPaw.png">
                         <collision-poly>
-                            <point x="0.178947" y="0.152778" />
-                            <point x="0.736842" y="0.152778" />
-                            <point x="0.768421" y="0.680556" />
-                            <point x="0.0947368" y="0.680556" />
+                            <point x="0.221052" y="0.12037" />
+                            <point x="0.726316" y="0.12037" />
+                            <point x="0.726316" y="0.462963" />
+                            <point x="0.221053" y="0.462963" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -799,6 +799,20 @@
                             <point x="0.211073" y="0.5" />
                         </collision-poly>
                     </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="scoreBG" sid="135808303399062">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="497620064237132" speed="10">
+                    <frame duration="1" hotspotX="0.503125" hotspotY="0.55" />
+                </animation>
+                <animation framecount="4" loop="1" name="Record" pingpong="0" repeatcount="1" repeatto="0" sid="653019895734260" speed="10">
+                    <frame duration="1" hotspotX="0.503125" hotspotY="0.55" />
+                    <frame duration="1" hotspotX="0.503125" hotspotY="0.55" />
+                    <frame duration="1" hotspotX="0.503125" hotspotY="0.55" />
+                    <frame duration="1" hotspotX="0.503125" hotspotY="0.55" />
                 </animation>
             </animation-folder>
         </object-type>
