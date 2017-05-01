@@ -409,9 +409,17 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <comment></comment>
                 <event-block sid="271891390041122">
                     <conditions />
-                    <actions />
+                    <actions>
+                        <action id="9" name="Set scale" sid="346977639521544" type="kakeIndicator">
+                            <param id="0" name="Scale">2-LayerScale(2)/2</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="179500041708577" type="kakeUI">
+                            <param id="0" name="Scale">2-LayerScale(2)/2</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <event-block sid="105424786449624">
                     <conditions />
@@ -786,7 +794,7 @@
                                             <param id="1" name="Value">1</param>
                                         </action>
                                         <action id="5" name="Set frame" sid="887890864766255" type="AisleNumbers">
-                                            <param id="0" name="Frame number">Aisle</param>
+                                            <param id="0" name="Frame number">Aisle-1</param>
                                         </action>
                                         <action id="2" name="Stop" sid="762532355389541" type="AisleNumbers" />
                                         <action behavior="Fade" id="0" name="Restart fade" sid="244818764560898" type="AisleNumbers" />
