@@ -11,26 +11,26 @@
                     </conditions>
                     <actions>
                         <action id="5" name="Check item exists" sid="540475385004798" type="LocalStorage">
-                            <param id="0" name="Key">&quot;highScore_key&quot;</param>
+                            <param id="0" name="Key">&quot;highScore_key_snackshack&quot;</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="873496190330263">
                     <conditions>
                         <condition id="9" name="On item exists" sid="944629352588213" type="LocalStorage">
-                            <param id="0" name="Key">&quot;highScore_key&quot;</param>
+                            <param id="0" name="Key">&quot;highScore_key_snackshack&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="1" name="Get item" sid="931320433995986" type="LocalStorage">
-                            <param id="0" name="Key">&quot;highScore_key&quot;</param>
+                            <param id="0" name="Key">&quot;highScore_key_snackshack&quot;</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="771692409852878">
                     <conditions>
                         <condition id="1" name="On item get" sid="332358390391196" type="LocalStorage">
-                            <param id="0" name="Key">&quot;highScore_key&quot;</param>
+                            <param id="0" name="Key">&quot;highScore_key_snackshack&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -43,7 +43,7 @@
                 <event-block sid="984148497822095">
                     <conditions>
                         <condition id="10" name="On item missing" sid="886359911432885" type="LocalStorage">
-                            <param id="0" name="Key">&quot;highScore_key&quot;</param>
+                            <param id="0" name="Key">&quot;highScore_key_snackshack&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -80,7 +80,7 @@
                             <param id="1" name="Value">score</param>
                         </action>
                         <action id="0" name="Set item" sid="305030398601325" type="LocalStorage">
-                            <param id="0" name="Key">&quot;highScore_key&quot;</param>
+                            <param id="0" name="Key">&quot;highScore_key_snackshack&quot;</param>
                             <param id="1" name="Value">highScore</param>
                         </action>
                         <action id="4" name="Set animation" sid="636844382106693" type="scoreBG">

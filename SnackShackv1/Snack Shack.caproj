@@ -2,7 +2,7 @@
 <c2project>
     <name>Snack Shack</name>
     <description></description>
-    <version>0.3</version>
+    <version>0.5</version>
     <author>The Sheep&apos;s Meow</author>
     <author-email>games@thesheepsmeow.com</author-email>
     <author-website>http://www.thesheepsmeow.com/html5</author-website>
@@ -503,9 +503,14 @@
         </object-type>
         <object-type name="Warning" sid="789077567819429">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="509632493433570">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="109924692620690" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\david\Downloads\SheepsMeowInternship\SnackCity\Sprites\Warning.png">
+                    <frame duration="1" hotspotX="0.996094" hotspotY="0.285156" original-source="C:\Users\david\Downloads\SheepsMeowInternship\SnackCity\Sprites\Warning.png">
                         <collision-poly>
                             <point x="0.257813" y="0.257813" />
                             <point x="0.5" y="0.1875" />
